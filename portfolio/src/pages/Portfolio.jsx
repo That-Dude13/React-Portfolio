@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {useState} from 'react';
+import Navigation from '../components/Navigation';
+
 
 const Portfolio = () => {
-  return (
-    <div>Portfolio</div>
-  )
-}
+  const [currentPage, setCurrentPage] = useState('Portfolio');
 
-export default Portfolio
+
+  return (
+    <div>
+      <header>
+        <h1>Portfolio</h1>
+        <Navigation setCurrentPage={Portfolio} />
+      </header>
+      <main>{<Portfolio> </Portfolio>}</main>
+    </div>
+  );
+};
+
+export default Portfolio;

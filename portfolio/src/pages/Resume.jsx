@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {useState} from 'react';
+import Navigation from '../components/Navigation';
+
 
 const Resume = () => {
-  return (
-    <div>Resume</div>
-  )
-}
+  const [currentPage, setCurrentPage] = useState('Resume');
 
-export default Resume
+
+  return (
+    <div>
+      <header>
+        <h1>Resume</h1>
+        <Navigation setCurrentPage={Resume} />
+      </header>
+      <main>{<Resume> </Resume>}</main>
+    </div>
+  );
+};
+
+export default Resume;

@@ -10,7 +10,9 @@
 // export default Home
 
 import React from 'react';
-import Navigation from './components/Navigation';
+import {useState} from 'react';
+import Navigation from '../components/Navigation';
+
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -22,7 +24,7 @@ const Home = () => {
         <h1>Home</h1>
         <Navigation setCurrentPage={Home} />
       </header>
-      <main>{<Home> </Home>()}</main>
+      <main>{<Home> </Home>}</main>
     </div>
   );
 };
