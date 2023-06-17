@@ -1,5 +1,4 @@
-// Navigation.js
-// Navigation.jsx
+
 import React from 'react';
 
 const Navigation = ({ setCurrentPage }) => {

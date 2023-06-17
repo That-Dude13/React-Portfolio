@@ -13,7 +13,7 @@ const Portfolio = () => {
         <h1>Portfolio</h1>
         <Navigation setCurrentPage={Portfolio} />
       </header>
-      <main>{<Portfolio> </Portfolio>}</main>
+      {/* <main>{<Portfolio> </Portfolio>}</main> */}
     </div>
   );
 };

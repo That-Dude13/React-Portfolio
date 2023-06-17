@@ -24,7 +24,7 @@ const Home = () => {
         <h1>Home</h1>
         <Navigation setCurrentPage={Home} />
       </header>
-      <main>{<Home> </Home>}</main>
+      {/* <main>{<Home> </Home>}</main> */}
     </div>
   );
 };

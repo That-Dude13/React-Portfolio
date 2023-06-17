@@ -13,7 +13,7 @@ const Resume = () => {
         <h1>Resume</h1>
         <Navigation setCurrentPage={Resume} />
       </header>
-      <main>{<Resume> </Resume>}</main>
+      {/* <main>{<Resume> </Resume>}</main> */}
     </div>
   );
 };

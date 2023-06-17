@@ -12,7 +12,7 @@ const Contact = () => {
         <h1>Contact</h1>
         <Navigation setCurrentPage={Contact} />
       </header>
-      <main>{<Contact> </Contact>}</main>
+      {/* <main>{<Contact> </Contact>}</main> */}
     </div>
   );
 };
