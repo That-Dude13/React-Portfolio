@@ -1,17 +1,19 @@
 import React from 'react';
-import {Navigation} from './components/Navigation';
+import Navigation from './components/Navigation';
+
+const Contact = () => {
+  const [currentPage, setCurrentPage] = useState('contact');
 
 
-const App = () => {
   return (
     <div>
       <header>
         <h1>Contact</h1>
-        <Navigation setActiveSection={setActiveSection} />
+        <Navigation setCurrentPage={Contact} />
       </header>
-      <main>{ContactSection()}</main>
+      <main>{<Contact> </Contact>()}</main>
     </div>
   );
 };
 
-export default App;
+export default Contact;

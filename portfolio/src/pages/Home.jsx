@@ -1,10 +1,30 @@
-import React from 'react'
+// import React from 'react'
+
+// const Home = () => {
+//   return (
+//     <div>Home</div>
+   
+//   )
+// }
+
+// export default Home
+
+import React from 'react';
+import Navigation from './components/Navigation';
 
 const Home = () => {
-  return (
-    <div>Home</div>
-   
-  )
-}
+  const [currentPage, setCurrentPage] = useState('Home');
 
-export default Home
+
+  return (
+    <div>
+      <header>
+        <h1>Home</h1>
+        <Navigation setCurrentPage={Home} />
+      </header>
+      <main>{<Home> </Home>()}</main>
+    </div>
+  );
+};
+
+export default Home;
