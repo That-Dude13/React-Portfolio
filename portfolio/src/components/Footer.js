@@ -13,17 +13,7 @@ export default function App() {
     <MDBFooter className='text-center text-white' style={{ backgroundColor: '#f1f1f1' }}>
       <MDBContainer className='pt-4'>
         <section className='mb-4'>
-          <MDBBtn
-            rippleColor="dark"
-            color='link'
-            floating
-            size="lg"
-            className='text-dark m-1'
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab className='fab fa-facebook-f' />
-          </MDBBtn>
+          
 
           <MDBBtn
             rippleColor="dark"
@@ -34,32 +24,12 @@ export default function App() {
             href='#!'
             role='button'
           >
-            <MDBIcon fab className='fa-twitter' />
+            <MDBIcon fab className='fa-stack-overflow' />
           </MDBBtn>
 
-          <MDBBtn
-            rippleColor="dark"
-            color='link'
-            floating
-            size="lg"
-            className='text-dark m-1'
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab className='fa-google' />
-          </MDBBtn>
+        
 
-          <MDBBtn
-            rippleColor="dark"
-            color='link'
-            floating
-            size="lg"
-            className='text-dark m-1'
-            href='#!'
-            role='button'
-          >
-            <MDBIcon fab className='fa-instagram' />
-          </MDBBtn>
+         
 
           <MDBBtn
             rippleColor="dark"

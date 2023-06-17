@@ -12,6 +12,8 @@
 import React from 'react';
 import {useState} from 'react';
 import Navigation from '../components/Navigation';
+import NavTabs from '../components/NavTabs';
+import App from '../components/Footer';
 
 
 const Home = () => {
@@ -22,6 +24,7 @@ const Home = () => {
     <div>
       <header>
         <h1>Home</h1>
+        <NavTabs Home />
         <Navigation setCurrentPage={Home} />
       </header>
       {/* <main>{<Home> </Home>}</main> */}
@@ -29,4 +32,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;

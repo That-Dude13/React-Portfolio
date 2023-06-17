@@ -1,43 +1,53 @@
-import React, { useState } from 'react';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarToggler,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBIcon,
-  MDBCollapse
-} from 'mdb-react-ui-kit';
+import React from 'react';
 
-export default function App() {
-  const [showNavSecond, setShowNavSecond] = useState(false);
-
+// Here we are using object destructuring assignment to pluck off our variables from the props object
+// We assign them to their own variable names
+function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
-      <MDBContainer fluid>
-        <MDBNavbarBrand href='#'>Navbar</MDBNavbarBrand>
-        <MDBNavbarToggler
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-          onClick={() => setShowNavSecond(!showNavSecond)}
+    <ul className="nav nav-tabs">
+      <li className="nav-item">
+        <a
+          href="#home"
+          onClick={() => handlePageChange('Home')}
+          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
+          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
+          className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
         >
-          <MDBIcon icon='bars' fas />
-        </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNavSecond}>
-          <MDBNavbarNav>
-            <MDBNavbarLink active aria-current='page' href='#'>
-              Home
-            </MDBNavbarLink>
-            <MDBNavbarLink href='#'>Features</MDBNavbarLink>
-            <MDBNavbarLink href='#'>Pricing</MDBNavbarLink>
-            <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
-              Disabled
-            </MDBNavbarLink>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBContainer>
-    </MDBNavbar>
+          Home
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#Resume"
+          onClick={() => handlePageChange('Resume')}
+          // Check to see if the currentPage is `Resume`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
+        >
+          Resume
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#Portfolio"
+          onClick={() => handlePageChange('Portfolio')}
+          // Check to see if the currentPage is `Portfolio`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+        >
+          Portfolio
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#contact"
+          onClick={() => handlePageChange('Contact')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
   );
 }
+
+export default NavTabs;

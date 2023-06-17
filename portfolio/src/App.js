@@ -28,7 +28,7 @@ const App = () => {
     <div>
       <header>
         <h1>My Portfolio</h1>
-        <Navigation setCurrentPage={setCurrentPage} />
+        <Navigation setCurrentPage={Home} />
       </header>
       <main>{renderPage()}</main>
     </div>
